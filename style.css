@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    background-color: #1D2F30;
+    font-family: 'Open Sans' , sans-serif;
+}
+
+.container{
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: #1D2F30;
+}
+
+.header-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 32px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 32px;
+}
+
+.underHeader {
+    background-image: url(img/img-undernav.jpg);
+    background-position: center;
+    height: 550px;
+}
