@@ -70,23 +70,27 @@ body{
 }
 
 .slider {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 30px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 100px;
+    transition: transform 1s ease-in-out;
 }
 
 .slider-elem {
+    width: 260px; /* Ширина каждого слайда */
+    height: 500px; /* Высота каждого слайда */
     margin: 30px;
-    width: 260px;
-    height: 500px;
     border: 1px solid black;
-
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .sliderImg {
     background-color: #0B191A;
-    width: 260px;
+    width: 100%;
     height: 180px;
     margin: 0;
     padding: 0;
@@ -98,11 +102,12 @@ body{
     object-fit: contain;
 }
 
-.one, .two{
-    rotate: 90deg;
+
+.one, .two {
+    transform: rotate(90deg); /* Поворот изображений */
 }
 
-.shade{
+.shade {
     background-color: rgba(0, 0, 0, 0.5);
     height: 550px;
 }
@@ -114,6 +119,7 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
+    color: white;
 }
 
 .sliderP {
@@ -128,10 +134,44 @@ body{
     color: #BAE249;
     background-color: #1D2F30;
     padding: 10px 25px;
+    cursor: pointer;
 }
 
 .sliderBtn:hover {
+    background-color: #BAE249;
+    color: #1D2F30;
+    transition: 0.3s;
+}
+
+.sliderBtn:focus {
+    outline: 2px solid #BAE249;
+}
+
+/* Блок для навигации */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Отступ сверху */
+    width: 100%;
+}
+
+/* Кнопки навигации */
+.prev-btn, .next-btn {
+    background-color: #BAE249;
+    color: #1D2F30;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
+    margin: 0 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #1D2F30;
+    color: #BAE249;
+}
+
+.prev-btn:focus, .next-btn:focus {
+    outline: 2px solid #BAE249;
 }
 
 .content-section {
@@ -298,4 +338,18 @@ body{
         color: #fff;
         text-align: center;
     }
+
+    .slider {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider-elem {
+        width: 90%; 
+        margin-bottom: 20px;
+    }
+
+
 }
+
