@@ -350,6 +350,13 @@ body{
         margin-bottom: 20px;
     }
 
+    .slider-elem {
+        display: none;
+    }
+
+    .slider-elem:last-child {
+        display: block;
+    }
 
 }
 
