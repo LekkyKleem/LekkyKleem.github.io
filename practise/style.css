@@ -1,0 +1,101 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #e2630e;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+}
+
+.logo img{
+    object-fit: contain;
+    position: relative;
+    width: 250px;
+    height: 100px;
+    bottom: 25px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-menu li {
+    display: inline;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: rgb(12, 31, 95);
+    border-radius: 10px;
+}
+
+
+.cart {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.books {
+    display: flex;
+    gap: 20px;
+}
+
+.book {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
