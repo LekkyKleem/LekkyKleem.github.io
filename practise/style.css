@@ -80,6 +80,7 @@ header {
     border-radius: 5px;
     cursor: pointer;
     margin-left: 10px;
+    text-decoration: none;
 }
 
 .checkout-btn:hover {
@@ -404,4 +405,8 @@ header {
     width: 150px;
     height: 30px;
     margin-top: auto;
+}
+.add-to-cart:hover{
+    background-color: #c7500a;
+    transition: 0.5s;
 }

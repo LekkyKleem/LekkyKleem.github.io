@@ -1,23 +1,32 @@
-//Корзина//
-let cart = [];
+document.addEventListener("DOMContentLoaded", () => {
+    const addToCartButtons = document.querySelectorAll(".add-to-cart");
 
-function addToCart(name, price) {
-    cart.push({ name, price: Number(price) });
-    updateCart();
-}
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", (event) => {
+            const product = event.target.closest(".product");
+            const productData = {
+                id: product.dataset.id,
+                name: product.dataset.name,
+                price: product.dataset.price,
+                image: product.dataset.image,
+                quantity: 1
+            };
 
-function updateCart() {
-    let total = cart.reduce((sum, item) => sum + item.price, 0);
-    document.querySelector("#cart-count").textContent = total + "₸";
-}
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let existingProduct = cart.find(item => item.id === productData.id);
 
-document.querySelector(".catalog-grid").addEventListener("click", function(event) {
-    if (event.target.classList.contains("add-to-cart")) {
-        const name = event.target.dataset.name;
-        const price = event.target.dataset.price;
-        addToCart(name, price);
-    }
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push(productData);
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Товар добавлен в корзину!");
+        });
+    });
 });
+
 
 //Фильтры//
 document.addEventListener("DOMContentLoaded", () => {
@@ -57,32 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 book.style.display = "none";
             }
-        });
-    });
-});
-
-//Сохранение товаров для переноса в корзину//
-document.addEventListener("DOMContentLoaded", () => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    function saveCart() {
-        localStorage.setItem("cart", JSON.stringify(cart));
-    }
-
-    document.querySelectorAll(".add-to-cart").forEach(button => {
-        button.addEventListener("click", () => {
-            const name = button.dataset.name;
-            const price = parseFloat(button.dataset.price);
-            const image = button.dataset.image;
-
-            const existingItem = cart.find(item => item.name === name);
-            if (existingItem) {
-                existingItem.quantity++;
-            } else {
-                cart.push({ name, price, image, quantity: 1 });
-            }
-
-            saveCart();
         });
     });
 });

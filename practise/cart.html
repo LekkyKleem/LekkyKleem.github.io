@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadGit - Корзина</title>
+    <link rel="stylesheet" href="cart-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="cart-container">
+        <h1>Ваша корзина</h1>
+        <a href="catalog.html" class="back-btn">&larr; Вернуться в каталог</a>
+    </div>
+</header>
+
+<main class="cart-container">
+    <div id="cart-items" class="cart-items">
+        <p>Корзина пуста</p>
+    </div>
+    <div class="cart-summary">
+        <h2>Итого: <span id="total-price">0</span> ₸</h2>
+        <button class="checkout-btn">Оформить заказ</button>
+    </div>
+</main>
+
+</body>
+</html>
