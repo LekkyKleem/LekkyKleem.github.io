@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menuToggle_ = document.querySelector(".menu-toggle_");
+    const navMenu = document.querySelector(".nav-menu");
+    const filterToggle = document.querySelector(".filter-toggle");
+    const filters = document.querySelector(".filters");
+
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    }
+
+    if (menuToggle_) {
+        menuToggle_.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    }
+
+    if (filterToggle) {
+        filterToggle.addEventListener("click", function () {
+            filters.classList.toggle("active");
+        });
+    }
+});
+
 //Корзина//
 let cart = [];
 
