@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadGit - Каталог</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="logotype">
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="#hero">О нас</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            🛒 <span id="cart-count">0 тенге</span>
+            <button class="checkout-btn">Перейти к оплате</button>
+        </div>
+    </header>
+
+    <section class="filters">
+        <h2>Фильтры:</h2>
+        <div class="filter-group">
+            <label for="genre">Жанр:</label>
+            <select id="genre">
+                <option value="all">Все</option>
+                <option value="classic">Классика</option>
+                <option value="fiction">Роман</option>
+                <option value="fantasy">Фэнтези</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="price">Цена:</label>
+            <input type="range" id="price" min="1000" max="10000" step="500" value="0">
+            <span id="price-value">1000₸</span>
+        </div>
+        <div class="filter-group">
+            <label for="rating">Рейтинг:</label>
+            <select id="rating">
+                <option value="all">Все</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+            </select>
+        </div>
+        <button class="show-filter">Показать сортированное</button>
+    </section>
+
+    <section class="catalog">
+        <h2>Каталог книг</h2>
+        <div class="catalog-grid">
+            <div class="book-card" data-genre="classic" data-rating="5">
+                <img src="images/book1.jpg" alt="Гордость и предубеждение">
+                <h3>Гордость и предубеждение</h3>
+                <p>Джейн Остен</p>
+                <p class="price">3500₸</p>
+                <button class="add-to-cart" data-name="Гордость и предубеждение" data-price="3500">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="fiction" data-rating="4">
+                <img src="images/book2.jpg" alt="1984">
+                <h3>1984</h3>
+                <p>Джордж Оруэлл</p>
+                <p class="price">2800₸</p>
+                <button class="add-to-cart" data-name="1984" data-price="2800">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="classic" data-rating="3">
+                <img src="images/book3.jpg" alt="Мастер и Маргарита">
+                <h3>Мастер и Маргарита</h3>
+                <p>Михаил Булгаков</p>
+                <p class="price">4200₸</p>
+                <button class="add-to-cart" data-name="Мастер и Маргарита" data-price="4200">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="classic" data-rating="5">
+                <img src="images/book4.jpg" alt="451° по Фаренгейту">
+                <h3>451° по Фаренгейту</h3>
+                <p>Рэй Брэдбери</p>
+                <p class="price">3200₸</p>
+                <button class="add-to-cart" data-name="451° по Фаренгейту" data-price="3200">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="fantasy" data-rating="4">
+                <img src="images/book5.jpg" alt="Властелин колец">
+                <h3>Властелин колец</h3>
+                <p>Дж. Р. Р. Толкин</p>
+                <p class="price">5500₸</p>
+                <button class="add-to-cart" data-name="Властелин колец" data-price="5500">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="classic" data-rating="3">
+                <img src="images/book6.jpg" alt="Война и мир">
+                <h3>Война и мир</h3>
+                <p>Лев Толстой</p>
+                <p class="price">4300₸</p>
+                <button class="add-to-cart" data-name="Война и мир" data-price="4300">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="fantasy" data-rating="5">
+                <img src="images/book7.jpg" alt="Гарри Поттер и философский камень">
+                <h3>Гарри Поттер и философский камень</h3>
+                <p>Дж. К. Роулинг</p>
+                <p class="price">5700₸</p>
+                <button class="add-to-cart" data-name="Гарри Поттер и философский камень" data-price="5700">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="classic" data-rating="4">
+                <img src="images/book8.jpg" alt="Грозовой перевал">
+                <h3>Грозовой перевал</h3>
+                <p>Эмили Бронте</p>
+                <p class="price">4600₸</p>
+                <button class="add-to-cart" data-name="Грозовой перевал" data-price="4600">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="classic" data-rating="3">
+                <img src="images/book9.jpg" alt="Преступление и наказание">
+                <h3>Преступление и наказание</h3>
+                <p>Фёдор Достоевский</p>
+                <p class="price">5900₸</p>
+                <button class="add-to-cart" data-name="Преступление и наказание" data-price="5900">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="fantasy" data-rating="5">
+                <img src="images/book10.jpg" alt="Волшебник Земноморья">
+                <h3>Волшебник Земноморья</h3>
+                <p>Урсула Ле Гуин</p>
+                <p class="price">3900₸</p>
+                <button class="add-to-cart" data-name="Волшебник Земноморья" data-price="3900">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="classic" data-rating="4">
+                <img src="images/book11.jpg" alt="Маленькие женщины">
+                <h3>Маленькие женщины</h3>
+                <p>Луиза Мэй Олкотт</p>
+                <p class="price">5200₸</p>
+                <button class="add-to-cart" data-name="Маленькие женщины" data-price="5200">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="fiction" data-rating="3">
+                <img src="images/book12.jpg" alt="Великий Гэтсби">
+                <h3>Великий Гэтсби</h3>
+                <p>Фрэнсис Скотт Фицджеральд</p>
+                <p class="price">4700₸</p>
+                <button class="add-to-cart" data-name="Великий Гэтсби" data-price="4700">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="fantasy" data-rating="5">
+                <img src="images/book13.jpg" alt="Хроники Нарнии">
+                <h3>Хроники Нарнии</h3>
+                <p>Клайв Стейплз Льюис</p>
+                <p class="price">6200₸</p>
+                <button class="add-to-cart" data-name="Хроники Нарнии" data-price="6200">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="fiction" data-rating="4">
+                <img src="images/book14.jpg" alt="Унесённые ветром">
+                <h3>Унесённые ветром</h3>
+                <p>Маргарет Митчелл</p>
+                <p class="price">7800₸</p>
+                <button class="add-to-cart" data-name="Унесённые ветром" data-price="7800">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="fantasy" data-rating="3">
+                <img src="images/book15.jpg" alt="Имя ветра">
+                <h3>Имя ветра</h3>
+                <p>Патрик Ротфусс</p>
+                <p class="price">6400₸</p>
+                <button class="add-to-cart" data-name="Имя ветра" data-price="6400">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="classic" data-rating="4">
+                <img src="images/book16.jpg" alt="Джейн Эйр">
+                <h3>Джейн Эйр</h3>
+                <p>Шарлотта Бронте</p>
+                <p class="price">4900₸</p>
+                <button class="add-to-cart" data-name="Джейн Эйр" data-price="4900">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="classic" data-rating="3">
+                <img src="images/book17.jpg" alt="Старик и море">
+                <h3>Старик и море</h3>
+                <p>Эрнест Хемингуэй</p>
+                <p class="price">3600₸</p>
+                <button class="add-to-cart" data-name="Старик и море" data-price="3600">Добавить в корзину</button>
+            </div>
+            <div class="book-card" data-genre="fantasy" data-rating="5">
+                <img src="images/book18.jpg" alt="Путь королей">
+                <h3>Путь королей</h3>
+                <p>Брендон Сандерсон</p>
+                <p class="price">7300₸</p>
+                <button class="add-to-cart" data-name="Путь королей" data-price="7300">Добавить в корзину</button>
+            </div>    
+        </div>
+    </section>
+    
+    
+</body>
+</html>

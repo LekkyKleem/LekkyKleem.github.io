@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ReadGit - Книжный магазин в г. Петропавловск</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,20 +17,83 @@
         </div>
         <nav>
             <ul class="nav-menu">
-                <li><a href="#">На главную</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="#hero">О нас</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
-        <div class="cart">
-            🛒 <span id="cart-count">0 тенге</span>
-        </div>
     </header>
 
-    <section>
-
+    <section class="hero" id="hero">
+        <div class="shade">
+        <div class="hero-content">
+            <h1>Добро пожаловать в наш книжный магазин ReadGit</h1>
+            <p>Мы стараемся делать ваше чтение более увлекательным и интригующим.
+            У нас вы найдете широкий выбор книг: от классики литературы до современных бестселлеров.</p>
+            <a href="catalog.html">Перейти в каталог</a>
+        </div>
+        </div>
     </section>
 
+    <section class="bestsellers">
+        <h2>Рекомендуем к чтению</h2>
+        <div class="books">
+            <div class="book">
+                <img src="images/book1.jpg" alt="Книга 1">
+                <h3>"Гордость и предубеждение" – Джейн Остин (1813)</h3>
+                <p>Классический роман о любви и социальных предрассудках в Англии XIX века.
+                История о борьбе за счастье и преодолении стереотипов.</p>
+                <a href="catalog.html">Перейти в каталог</a>
+            </div>
+            <div class="book">
+                <img src="images/book2.jpg" alt="Книга 2">
+                <h3>"1984" – Джордж Оруэлл (1949)</h3>
+                <p>Антиутопический роман о тоталитарном обществе, где правительство контролирует все аспекты жизни,
+                а мысли под строгим наблюдением.</p>
+                <a href="catalog.html">Перейти в каталог</a>
+            </div>
+            <div class="book">
+                <img src="images/book3.jpg" alt="Книга 3">
+                <h3>"Мастер и Маргарита" – Михаил Булгаков (1967)</h3>
+                <p>Мистическая история, сочетающая сатиру, философию и фантастику,
+                рассказывающая о приезде дьявола в атеистическую Москву.</p>
+                <a href="catalog.html">Перейти в каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <h2>Наши контакты</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="images/phone-icon.png" alt="Телефон">
+                <p>+7 (123) 456-78-90</p>
+            </div>
+            <div class="contact-item">
+                <img src="images/email-icon.png" alt="Email">
+                <p>info@readgit.com</p>
+            </div>
+            <div class="contact-item">
+                <img src="images/location-icon.png" alt="Адрес">
+                <p>г. Петропавловск, ул. А.С. Пушкина, д. 10</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>© 2025 ReadGit. Все права защищены.</p>
+        <p>г. Петропавловск</p>
+        <ul class="footer-menu">
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Пользовательское соглашение</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://ru-ru.facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com"><img src="images/insta.png" alt="Instagram"></a>
+            <a href="https://web.telegram.org"><img src="images/tg.png" alt="Telegram"></a>
+        </div>
+    </footer>
+    
 </body>
 </html>
