@@ -11,12 +11,17 @@
     font-weight: 400;
     font-style: normal;
 }
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
 
 html, body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .olympic-shop, .road-to-paris, .about-the-games, .worldwide-partners{
@@ -80,6 +85,15 @@ li a{
     color: black;
 }
 
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
 .header-hero{
     width: 100%;
     height: 500px;
@@ -135,7 +149,7 @@ li a{
 }
 
 .countdown{
-    font-family: 'Poppins Regular', sans-serif;
+    font-family: 'Paris2024 Variable', sans-serif;
     font-weight: 700;
     font-size: 26px;
     text-align: center;
@@ -186,10 +200,23 @@ li a{
     padding: 10px;
 }
 
-.rtp-item p, .timer{
 
-    font-size: 14px;
-    font-weight: 200;
+.rtp-slider {
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+    margin-top: 100px;
+}
+
+.rtp-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
 }
 
 .about-the-games h1{
@@ -199,6 +226,7 @@ li a{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'Paris2024 Variable', sans-serif;
 }
 .about-the-games{
     font-family: 'Poppins Regular', sans-serif;
@@ -245,6 +273,9 @@ li a{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'Paris2024 Variable', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .olympic-shop{
@@ -252,6 +283,7 @@ li a{
     font-weight: 700;
     font-size: 15px;
     background-color: #D2E5F0;
+    padding: 40px;
 }
 .olympic-shop-content{
     text-align: center;
@@ -261,7 +293,7 @@ li a{
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 50px;
+    padding: 50px;
 }
 
 .shop-item img{
@@ -295,6 +327,23 @@ li a{
     padding: 10px;
 }
 
+.olympic-slider {
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+    margin-top: 100px;
+}
+
+.olympic-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
 
 .worldwide-partners h1{
     font-family: 'Paris2024 Variable', sans-serif;
@@ -344,7 +393,6 @@ li a{
 }
 
 .download {
-    background-color: #474747;
     display: flex;
     flex-direction: column;
     width: 750px;
@@ -365,7 +413,6 @@ li a{
 }
 
 .social-links {
-    background-color: #333333;
     display: flex;
     flex-direction: column;
     width: 755px;
@@ -397,3 +444,179 @@ li a{
     margin: 0;
     color: white;
 }
+
+
+/*Адаптация для планшета*/
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+        right: 20px;
+        top: 15px;
+    }
+
+    .header-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: black;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .header-nav li {
+        padding: 10px;
+    }
+
+    .rtp-container .rtp-item:nth-child(n+3){
+        display: none;
+    }
+
+    .atg-container .atg-item:nth-child(n+3){
+        display: none;
+    }
+
+    .shop-container .shop-item:nth-child(n+3){
+        display: none;
+    }
+    .partners-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки на планшетах */
+    }
+    
+    .partners-container img{
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+    .partners-media:nth-child(n+4) {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 400px;
+        background: linear-gradient(to right, #474747 50% , #333333 50%);
+        padding: 60px;
+    }  
+    .download {
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+    
+    .download-images {
+        display: flex;
+        gap: 20px; 
+    }
+    
+    .download img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+    
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        width: 755px;
+        height: 350px;
+        padding: 30px;
+        color: white;
+        font-size: 20px;
+    
+    }
+    
+    .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 65px;
+    }
+    
+    .social-icons img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+}
+
+
+/*Адаптация для мобильного*/
+
+@media (max-width: 480px) {
+    .hero-slider{
+        position: relative;
+        top: -20px;
+    }
+
+    .countdown h1{
+        font-size: 40px;
+    }
+    .countdown-content{
+        font-size: 20px;
+    }
+
+    .road-to-paris h1{
+        font-size: 40px;
+    }
+
+    .rtp-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .rtp-container .rtp-item:nth-child(n+2){
+        display: none;
+    }
+
+    .atg-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .atg-container .atg-item:nth-child(n+2){
+        display: none;
+    }
+
+    .shop-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .shop-container .shop-item:nth-child(n+2){
+        display: none;
+    }
+
+    .worldwide-partners h1{
+        font-size: 40px;
+    }
+    .partners-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .partners-container img{
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+    }
+    .partners-media:nth-child(n+3) {
+        display: none;
+    }
+
+    .footer {
+        font-size: 15px;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+}
+
