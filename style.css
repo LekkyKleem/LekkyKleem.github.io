@@ -1,362 +1,533 @@
-*{
+* {
+    box-sizing: border-box;
+  }
+
+body{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto condensed', sans-serif;
+}
+
+.header-hero{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url(/images/header-hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 150px;
     box-sizing: border-box;
 }
 
-body{
-    color: white;
-    background-color: #1D2F30;
-    font-family: 'Open Sans' , sans-serif;
-}
-
-.container {
-    width: 100%;
-    max-width: 1260px;
-    margin: 0 auto;
-}
-
-
-.header{
-    background-color: #1D2F30;
-}
-
-.header-inner{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.logo{
-    font-size: 32px;
-}
-
-.nav{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-}
-
-.nav-link {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 32px;
-}
-
-.underHeader {
-    background-image: url(img/img-undernav.jpg);
-    background-position: center;
-    width: 100%;
-    min-height: 550px;
-    text-align: center;
-}
-
-
-.nameTag {
-    font-size: 48px;
-    font-style: italic;
-    font-weight: 100;
-}
-
-.nameText {
-    margin-top: 5%;
-}
-
-.rsBtn {
-    color: #BAE249;
-    margin-top: px;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.slider {
-    display: flex;
+.header-hero h1{
     position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin-left: 100px;
-    transition: transform 1s ease-in-out;
+    color: white;
+    font-size: 50px;
+    z-index: 2;
 }
 
-.slider-elem {
-    width: 260px; /* Ширина каждого слайда */
-    height: 500px; /* Высота каждого слайда */
-    margin: 30px;
-    border: 1px solid black;
-    transition: transform 0.5s ease-in-out;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-.sliderImg {
-    background-color: #0B191A;
-    width: 100%;
-    height: 180px;
-    margin: 0;
-    padding: 0;
-}
-
-.sliderImg > img {
+.header-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-}
-
-
-.one, .two {
-    transform: rotate(90deg); /* Поворот изображений */
-}
-
-.shade {
     background-color: rgba(0, 0, 0, 0.5);
-    height: 550px;
+    z-index: 1;
 }
 
-.sliderHeader {
-    font-size: 24px;
-    font-weight: 100;
-    font-style: italic;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    color: white;
+.header-hero p {
+  position: relative;
+  color: white;
+  z-index: 2;
+  font-size: 30px;
+  font-weight: 700;
 }
 
-.sliderP {
-    font-size: 16px;
-    font-weight: 400;
-    color: #899D9D;
-    padding: 10px;
-}
-
-.sliderBtn {
-    border: 1px solid #BAE249;
-    color: #BAE249;
-    background-color: #1D2F30;
-    padding: 10px 25px;
-    cursor: pointer;
-}
-
-.sliderBtn:hover {
-    background-color: #BAE249;
-    color: #1D2F30;
-    transition: 0.3s;
-}
-
-.sliderBtn:focus {
-    outline: 2px solid #BAE249;
-}
-
-/* Блок для навигации */
-.slider-nav {
+.about-travel{
+    margin: 20px;
+    padding: 30px;
+    flex-direction: column;
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Отступ сверху */
-    width: 100%;
+    align-self: center;
 }
 
-/* Кнопки навигации */
-.prev-btn, .next-btn {
-    background-color: #BAE249;
-    color: #1D2F30;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.prev-btn:hover, .next-btn:hover {
-    background-color: #1D2F30;
-    color: #BAE249;
-}
-
-.prev-btn:focus, .next-btn:focus {
-    outline: 2px solid #BAE249;
-}
-
-.content-section {
-    display: flex;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 20px;
-}
-
-.images-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 60%;
-    background-color: #0B191A;
-    margin-left: 70px;
-}
-
-.images-section img {
-    width: 150px;
-    height: auto;
-    object-fit: contain;
-    height: 200px;
-}
-
-.text-section {
-    margin-left: 50px;
-    width: 20%;
-    padding: 20px;
-    background-color: #BAE249;
-    height: 600px;
-    
-}
-
-.text-section h2 {
-    color: #1D2F30;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.text-section p {
-    font-size: 16px;
-    margin-bottom: 15px;
+.about-travel h1{
+    font-size: 30px;
+    font-weight: 700;
     color: #333;
 }
 
-.read-more {
-    font-size: 16px;
-    color: #1D2F30;
-    text-decoration: none;
-    font-weight: bold;
+.about-travel p{
+    font-size: 20px;
+    color: #666;
+    font-weight: 500;
 }
 
-.read-more:hover {
-    text-decoration: underline;
+.info-container{
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
-.upperFooter {
-    background-image: url(img/img-upperfooter.jpg);
+.info-container h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: #1eff00;
+}
+
+.info-container p{
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.day-one{
+    padding: 30px;
+    margin: 20px;
+}
+
+.day-one h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #333;
+}
+
+.day-one p{
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+  
+.carousel-track img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 400px;
+    object-fit: cover;
+}
+  
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+}
+  
+button.prev {
+    left: 10px;
+  }
+  
+button.next {
+    right: 10px;
+  }
+
+.day-two{
+    padding: 30px;
+    margin: 20px;
+}
+
+.day-two h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #333;
+}
+
+.day-two p{
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.tour-price{
+    padding: 40px;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.tour-price h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+}
+
+.tour-price p{
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.price-container{
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.price-item ul{
+    padding: 0;
+    color: #444;
+}
+
+.price-item p{
+    color: #1eff00;
+    font-weight: 700;
+}
+
+.what-to-take{
+    padding: 40px;
+    margin: 20px;
+}
+
+.what-to-take h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+}
+
+.what-to-take-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.booking-form-bg {
+    
+    padding: 30px;
+    position: relative;
+    background-image: url('images/booking-bg.jpeg');
     background-size: cover;
     background-position: center;
-    filter: grayscale(100);
-    width: 100%;
-    height: 350px;  
-    text-align: center;
-}
-
-.shade1{
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 350px;
-}
-
-
-.helpName{
-    margin: 10px;
-    padding: 0px 5px;
-    width: 300px;
-    height: 40px;
-    border: none;
-}
-
-.helpEmail{
-    margin: 10px;
-    padding: 0px 5px;
-    width: 300px;
-    height: 40px;
-    border: none;
-}
-
-.helpBtn {
-    width: 150px;
-    height: 40px;
-    background-color: #BAE249 !important;
-    color: #0B191A !important;
-    border: none !important;
-    cursor: pointer !important;
-    font-size: 16px;
-    appearance: none !important;
-    outline: none !important;
-    text-align: center;
-    line-height: 40px;
-}
-
-.link-footer{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    height: 60px;
+    align-items: center;
+    padding: 30px;
 }
 
-.footer p{
+.booking-form-bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* затемнение */
+    z-index: 1;
+}
+
+.booking-form-bg h1 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 36px;
     text-align: center;
-    background-color: #0B191A;
 }
 
-.sliderBtn:hover{
-    background-color: #BAE249;
-    color: #1D2F30;
-    transition: 0.3s;
+#bookingForm {
+    font-family: 'Roboto condensed', sans-serif;
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
 }
 
-.sliderBtn:focus, .helpBtn:focus {
-    outline: 2px solid #BAE249;
+#bookingForm label {
+    font-weight: 600;
+    color: #333;
 }
 
-
-@media (max-width: 480px) {
-
-    .nav{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-        width: 100%;
-        margin-top: 50px;
-    }
-    
-    .headerBtn {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .content-section {
-        flex-direction: column;
-    }
-
-    .text-section {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    .images-section{
-        grid-template-columns: 1fr;
-    }
-    
-    .slider{
-        grid-template-columns: 1fr;
-    }
-
-    .footer {
-        margin-top: 50%;
-        position: relative;
-        color: #fff;
-        text-align: center;
-    }
-
-    .slider {
-        margin-left: 0;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .slider-elem {
-        width: 90%; 
-        margin-bottom: 20px;
-    }
-
-    .slider-elem {
-        display: none;
-    }
-
-    .slider-elem:last-child {
-        display: block;
-    }
-
+#bookingForm input,
+#bookingForm textarea,
+#bookingForm select,
+#bookingForm button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
 
+#bookingForm button {
+    background-color: #1eff00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#bookingForm button:hover {
+    background-color: #14c600;
+}
+
+.site-footer {
+    background-color: #222;
+    padding: 40px 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-left,
+  .footer-right {
+    flex: 1 1 300px;
+    margin: 10px;
+  }
+  
+  .footer-left h2,
+  .footer-right h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p,
+  .footer-right p {
+    margin: 5px 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+
+@media (max-width: 1024px) {
+    .info-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .gallery-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .what-to-take-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .price-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .day-one h1,
+    .day-two h1,
+    .tour-price h1 {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-hero {
+      padding: 80px 20px;
+      height: 500px;
+    }
+  
+    .header-hero h1 {
+      font-size: 32px;
+      text-align: center;
+    }
+  
+    .header-hero p {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .about-travel {
+      padding: 20px;
+      margin: 10px;
+    }
+  
+    .about-travel h1 {
+      font-size: 24px;
+    }
+  
+    .about-travel p {
+      font-size: 16px;
+    }
+  
+    .info-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .gallery-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .day-one h1,
+    .day-two h1 {
+      font-size: 30px;
+    }
+  
+    .day-one p,
+    .day-two p,
+    .tour-price p,
+    .what-to-take p {
+      font-size: 16px;
+    }
+  
+    .tour-price h1 {
+      font-size: 30px;
+    }
+  
+    .what-to-take-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .carousel-track img {
+      height: 250px;
+    }
+  
+    #bookingForm {
+      padding: 20px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-left,
+    .footer-right {
+      flex: 1 1 100%;
+      margin: 10px 0;
+    }
+  
+    .price-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-hero {
+      height: auto;
+      padding: 60px 15px;
+    }
+  
+    .header-hero h1 {
+      font-size: 24px;
+    }
+  
+    .header-hero p {
+      font-size: 16px;
+    }
+  
+    .gallery-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .what-to-take-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .day-one h1,
+    .day-two h1,
+    .tour-price h1 {
+      font-size: 24px;
+    }
+  
+    .carousel-track img {
+      height: 200px;
+    }
+  
+    #bookingForm {
+      padding: 15px;
+    }
+  
+    #bookingForm input,
+    #bookingForm textarea,
+    #bookingForm select,
+    #bookingForm button {
+      font-size: 14px;
+    }
+  
+    .footer-bottom {
+      font-size: 12px;
+    }
+  }
+
+/*Валидация (ошибка и успех)*/
+
+.error-message,
+.success-message {
+  display: none;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
