@@ -1,0 +1,533 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto condensed', sans-serif;
+}
+
+.header-hero{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url(/images/header-hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 150px;
+    box-sizing: border-box;
+}
+
+.header-hero h1{
+    position: relative;
+    color: white;
+    font-size: 50px;
+    z-index: 2;
+}
+
+.header-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-hero p {
+  position: relative;
+  color: white;
+  z-index: 2;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.about-travel{
+    margin: 20px;
+    padding: 30px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.about-travel h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+}
+
+.about-travel p{
+    font-size: 20px;
+    color: #666;
+    font-weight: 500;
+}
+
+.info-container{
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.info-container h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: #1eff00;
+}
+
+.info-container p{
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.day-one{
+    padding: 30px;
+    margin: 20px;
+}
+
+.day-one h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #333;
+}
+
+.day-one p{
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+  
+.carousel-track img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 400px;
+    object-fit: cover;
+}
+  
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+}
+  
+button.prev {
+    left: 10px;
+  }
+  
+button.next {
+    right: 10px;
+  }
+
+.day-two{
+    padding: 30px;
+    margin: 20px;
+}
+
+.day-two h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #333;
+}
+
+.day-two p{
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.tour-price{
+    padding: 40px;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.tour-price h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+}
+
+.tour-price p{
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.price-container{
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.price-item ul{
+    padding: 0;
+    color: #444;
+}
+
+.price-item p{
+    color: #1eff00;
+    font-weight: 700;
+}
+
+.what-to-take{
+    padding: 40px;
+    margin: 20px;
+}
+
+.what-to-take h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+}
+
+.what-to-take-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.booking-form-bg {
+    
+    padding: 30px;
+    position: relative;
+    background-image: url('images/booking-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.booking-form-bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* затемнение */
+    z-index: 1;
+}
+
+.booking-form-bg h1 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+}
+
+#bookingForm {
+    font-family: 'Roboto condensed', sans-serif;
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+#bookingForm label {
+    font-weight: 600;
+    color: #333;
+}
+
+#bookingForm input,
+#bookingForm textarea,
+#bookingForm select,
+#bookingForm button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#bookingForm button {
+    background-color: #1eff00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#bookingForm button:hover {
+    background-color: #14c600;
+}
+
+.site-footer {
+    background-color: #222;
+    padding: 40px 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-left,
+  .footer-right {
+    flex: 1 1 300px;
+    margin: 10px;
+  }
+  
+  .footer-left h2,
+  .footer-right h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p,
+  .footer-right p {
+    margin: 5px 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+
+@media (max-width: 1024px) {
+    .info-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .gallery-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .what-to-take-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .price-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .day-one h1,
+    .day-two h1,
+    .tour-price h1 {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-hero {
+      padding: 80px 20px;
+      height: 500px;
+    }
+  
+    .header-hero h1 {
+      font-size: 32px;
+      text-align: center;
+    }
+  
+    .header-hero p {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .about-travel {
+      padding: 20px;
+      margin: 10px;
+    }
+  
+    .about-travel h1 {
+      font-size: 24px;
+    }
+  
+    .about-travel p {
+      font-size: 16px;
+    }
+  
+    .info-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .gallery-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .day-one h1,
+    .day-two h1 {
+      font-size: 30px;
+    }
+  
+    .day-one p,
+    .day-two p,
+    .tour-price p,
+    .what-to-take p {
+      font-size: 16px;
+    }
+  
+    .tour-price h1 {
+      font-size: 30px;
+    }
+  
+    .what-to-take-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .carousel-track img {
+      height: 250px;
+    }
+  
+    #bookingForm {
+      padding: 20px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-left,
+    .footer-right {
+      flex: 1 1 100%;
+      margin: 10px 0;
+    }
+  
+    .price-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-hero {
+      height: auto;
+      padding: 60px 15px;
+    }
+  
+    .header-hero h1 {
+      font-size: 24px;
+    }
+  
+    .header-hero p {
+      font-size: 16px;
+    }
+  
+    .gallery-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .what-to-take-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .day-one h1,
+    .day-two h1,
+    .tour-price h1 {
+      font-size: 24px;
+    }
+  
+    .carousel-track img {
+      height: 200px;
+    }
+  
+    #bookingForm {
+      padding: 15px;
+    }
+  
+    #bookingForm input,
+    #bookingForm textarea,
+    #bookingForm select,
+    #bookingForm button {
+      font-size: 14px;
+    }
+  
+    .footer-bottom {
+      font-size: 12px;
+    }
+  }
+
+/*Валидация (ошибка и успех)*/
+
+.error-message,
+.success-message {
+  display: none;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
